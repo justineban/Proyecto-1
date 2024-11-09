@@ -37,7 +37,7 @@ Backend de una plataforma de biblioteca que le permite a los usuarios/clientes r
 
 1. Clonar el repositorio:
    ```bash
-   git clone 
+   git clone https://github.com/justineban/Proyecto-1.git
    ```
 2. Instalar las dependencias:
    ```bash
