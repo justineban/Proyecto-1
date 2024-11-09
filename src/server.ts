@@ -8,25 +8,25 @@ import connectDB from "./config/db";
 
 const PORT = process.env.PORT || 8080;
 
-// Configuración de variables de entorno
+
 dotenv.config();
 
 const app: Application = express();
 
-// Conexión a la base de datos
+
 connectDB();
 
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
 
-// Rutas
-app.use('/api/auth', authRoutes); // Rutas de autenticación
-app.use('/api/user', userRoutes); // Rutas de usuario
-app.use('/api/books', bookRoutes); // Rutas de libros
 
-// Manejo de errores para rutas no encontradas
+app.use('/api/auth', authRoutes); 
+app.use('/api/user', userRoutes);
+app.use('/api/books', bookRoutes);
+
+
 app.use((req, res) => {
   res.status(404).json({ message: 'Endpoint not found' });
 });

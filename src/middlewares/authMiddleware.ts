@@ -21,7 +21,7 @@ export const authMiddleware = async (req: AuthRequest, res: Response, next: Next
             return res.status(401).json({ message: 'User not found' });
         }
 
-        // Asigna la instancia del usuario a req.user para tener acceso a hasPermission y otros métodos
+        
         req.user = user as AuthRequest['user'];
 
         next();
