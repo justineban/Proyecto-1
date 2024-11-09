@@ -54,4 +54,4 @@ Backend de una plataforma de biblioteca que le permite a los usuarios/clientes r
 - **Node.js**: Versión 14 o más.
 - **Express**.
 - **JWT**.
-- - **MongoDB**.
+- **MongoDB**.
