@@ -10,10 +10,10 @@ export const registerUserAction = async (userData: Partial<IUser>) => {
 
 export const loginUserAction = async (email: string, password: string) => {
   const user = await User.findOne({ email, isActive: true });
-  if (!user) throw new Error('User not found or inactive');
+  if (!user) throw new Error('Usuario no encontrado o inactivo');
 
   const isMatch = await user.comparePassword(password);
-  if (!isMatch) throw new Error('Invalid credentials');
+  if (!isMatch) throw new Error('Credenciales inválidas');
 
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET!, { expiresIn: '1h' });
   return { user, token };
@@ -23,6 +23,6 @@ export const verifyTokenAction = (token: string) => {
   try {
     return jwt.verify(token, process.env.JWT_SECRET!);
   } catch {
-    throw new Error('Invalid token');
+    throw new Error('Token inválido');
   }
 };

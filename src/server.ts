@@ -28,10 +28,10 @@ app.use('/api/books', bookRoutes);
 
 
 app.use((req, res) => {
-  res.status(404).json({ message: 'Endpoint not found' });
+  res.status(404).json({ message: 'Endpoint no encontrado' });
 });
 
 // Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });

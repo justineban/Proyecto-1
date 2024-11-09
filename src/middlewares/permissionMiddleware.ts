@@ -10,7 +10,7 @@ export const updateUserPermissionMiddleware = (req: AuthRequest, res: Response, 
         return next();
     }
 
-    return res.status(403).json({ message: 'Access denied' });
+    return res.status(403).json({ message: 'Acceso denegado' });
 };
 
 export const deleteUserPermissionMiddleware = (req: AuthRequest, res: Response, next: NextFunction) => {
@@ -22,7 +22,7 @@ export const deleteUserPermissionMiddleware = (req: AuthRequest, res: Response, 
         return next();
     }
 
-    return res.status(403).json({ message: 'Access denied' });
+    return res.status(403).json({ message: 'Acceso denegado' });
 };
 
 export const updateBookPermissionMiddleware = (req: AuthRequest, res: Response, next: NextFunction) => {
@@ -32,7 +32,7 @@ export const updateBookPermissionMiddleware = (req: AuthRequest, res: Response, 
         return next();
     }
 
-    return res.status(403).json({ message: 'Access denied' });
+    return res.status(403).json({ message: 'Acceso denegado' });
 };
 
 export const deleteBookPermissionMiddleware = (req: AuthRequest, res: Response, next: NextFunction) => {
@@ -42,7 +42,7 @@ export const deleteBookPermissionMiddleware = (req: AuthRequest, res: Response, 
         return next();
     }
 
-    return res.status(403).json({ message: 'Access denied' });
+    return res.status(403).json({ message: 'Acceso denegado' });
 };
 
 export const createBookPermissionMiddleware = (req: AuthRequest, res: Response, next: NextFunction) => {
@@ -52,5 +52,5 @@ export const createBookPermissionMiddleware = (req: AuthRequest, res: Response, 
         return next();
     }
 
-    return res.status(403).json({ message: 'Access denied' });
+    return res.status(403).json({ message: 'Acceso denegado' });
 };

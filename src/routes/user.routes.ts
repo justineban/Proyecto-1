@@ -9,13 +9,13 @@ const userRoutes = Router();
 async function UpdateUser(request: AuthRequest, response: Response) {
   try {
     const userId = request.params.userId || request.user?.id;
-    if (!userId) throw new Error('User ID is missing');
+    if (!userId) throw new Error('ID de usuario inexistente');
 
     const updates = request.body;
     const updatedUser = await updateUserController(userId, updates);
 
     response.status(200).json({
-      message: 'User updated successfully',
+      message: 'Usuario actualizado',
       user: updatedUser,
     });
   } catch (error) {
@@ -28,11 +28,11 @@ async function UpdateUser(request: AuthRequest, response: Response) {
 async function DesactivateUser(request: AuthRequest, response: Response) {
   try {
     const userId = request.params.userId || request.user?.id;
-    if (!userId) throw new Error('User ID is missing');
+    if (!userId) throw new Error('ID de usuario inexistente');
 
     await desactivateUserController(userId);
     response.status(200).json({
-      message: 'User deactivated successfully',
+      message: 'Usuario desactivado',
     });
   } catch (error) {
     response.status(400).json({
